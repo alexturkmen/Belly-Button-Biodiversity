@@ -114,7 +114,7 @@ function buildDropDown() {
       dropDown.append("option").text(item).property("value", item);
     });
 
-    // Creating the plots and demographic data for the first ID
+   // Creating the plots and demographic data for the first ID
     let firstID = names[0];
     // console.log(names[0])
     buildPlots(firstID);
@@ -135,6 +135,8 @@ function optionChanged(newSample) {
 // Creating the charts
 buildDropDown();
 
+// Bonus section
+
 function buildGauge(subjectID) {
     d3.json("samples.json").then((data) => {
         let metadata = data.metadata;
@@ -146,7 +148,7 @@ function buildGauge(subjectID) {
         let demInfoText = demInfo[0];
 
     let wfreq = demInfoText.wfreq
-    console.log(wfreq);
+    // console.log(wfreq);
 
     let dataInd = [
         {
